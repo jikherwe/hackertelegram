@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>HACKER — Защита в сети</title>
+    <style>
+        /* Тёмная кибер-тема */
+        body {
+            background-color: #0a0a0f;
+            color: #00ff88;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 255, 136, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0, 100, 255, 0.1) 0%, transparent 20%);
+        }
+
+        /* Мигающий курсор */
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 18px;
+            background: #00ff88;
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        h1 {
+            color: #00ffcc;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.7);
+            margin: 20px 0;
+        }
+
+        p {
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.1em;
+        }
+
+        .glitch {
+            color: #ff00ff;
+            text-shadow: 2px 0 5px #00ffff, -2px 0 5px #ff00ff;
+            animation: glitch 2s infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(2px, -2px); }
+            60% { transform: translate(-2px, 0); }
+            80% { transform: translate(2px, 2px); }
+            100% { transform: translate(0); }
+        }
+
+        .card {
+            background: rgba(10, 20, 30, 0.7);
+            border: 1px solid #00ff88;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 700px;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+        }
+
+        .project {
+            text-align: left;
+            margin: 15px 0;
+            padding: 10px;
+            background: rgba(0, 50, 30, 0.3);
+            border-left: 3px solid #00ff88;
+        }
+
+        button {
+            background: #1a1a2e;
+            color: #00ff88;
+            border: 1px solid #00ff88;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-family: 'Courier New';
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #00ff88;
+            color: #0a0a0f;
+            box-shadow: 0 0 10px #00ff88;
+        }
+
+        .terminal {
+            text-align: left;
+            background: #000;
+            color: #00ff88;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 700px;
+            border: 1px solid #00ff88;
+            border-radius: 5px;
+            font-size: 0.9em;
+            height: 150px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            margin-top: 50px;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .drop {
+            position: absolute;
+            background: linear-gradient(0deg, rgba(0,255,136,0.6), rgba(0,255,255,0.2));
+            width: 1px;
+            height: 50px;
+            border-radius: 0 0 5px 5px;
+            opacity: 0.5;
+            animation: rain linear infinite;
+        }
+
+        @keyframes rain {
+            0% { transform: translateY(-100vh); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Кибер-дождь -->
+    <div class="rain" id="rain"></div>
+
+    <h1>HACKER</h1>
+    <p class="glitch">[ ЦИФРОВОЙ СПРАВЕДЛИВОСТИ ]</p>
+    <p>Я — <strong>Hacker</strong>. Не ради хаоса. А ради <span style="color:#00ccff">справедливости</span>.<br>
+    Я вижу, что происходит в тенях сети. И я <strong>не оставлю вас одних</strong>.</p>
+
+    <div class="card">
+        <h2>🛡️ МОЙ ПРОЕКТ: «STOP CYBERBULLY»</h2>
+        <p>Каждый день люди страдают от <strong>кибербуллинга, троллинга, утечек данных и шантажа</strong>.<br>
+        Я помогаю им анонимно, безопасно и эффективно.</p>
+
+        <div class="project">
+            <strong>🔹 Анти-тролль система</strong><br>
+            Анализирую сообщения, выявляю агрессоров, помогаю блокировать и подавать в суд.
+        </div>
+        <div class="project">
+            <strong>🔹 Восстановление репутации</strong><br>
+            Удаляю фейковые посты, ложные обвинения, разоблачаю ложь.
+        </div>
+        <div class="project">
+            <strong>🔹 Защита от утечек</strong><br>
+            Если у вас украли фото или данные — я помогу их удалить из даркнета и соцсетей.
+        </div>
+        <div class="project">
+            <strong>🔹 Шифрованная поддержка</strong><br>
+            Общение через зашифрованный канал. Ваше имя — в безопасности.
+        </div>
+    </div>
+
+    <button onclick="showTerminal()">Открыть терминал связи</button>
+    <button onclick="showMessage()">Отправить сигнал о помощи</button>
+
+    <div id="terminal" class="terminal hidden">
+        &gt; ЗАПУЩЕН МОДУЛЬ СВЯЗИ...<br>
+        &gt; ШИФРОВАНИЕ: ✅<br>
+        &gt; СТАТУС: ГОТОВ К ПРИЁМУ СООБЩЕНИЯ<br>
+        <span id="response"></span>
+    </div>
+
+    <div id="messageForm" class="card hidden">
+        <h3>📩 Отправьте сигнал о помощи</h3>
+        <p>Ваше сообщение зашифровано. Имя — анонимно.</p>
+        <textarea id="helpMsg" rows="4" style="width:100%; background:#000; color:#0f0; border:1px solid #00ff88;"></textarea><br>
+        <button onclick="sendHelp()">Отправить в тень сети</button>
+    </div>
+
+    <div class="card">
+        <h2>💡 Что я могу сделать для вас:</h2>
+        <p>• Удалить оскорбительные посты и комментарии<br>
+        • Найти и остановить анонимного тролля<br>
+        • Защитить от шантажа и угроз<br>
+        • Восстановить доступ к взломанному аккаунту<br>
+        • Научить защищать себя в интернете</p>
+        <p><em>Вы не одни. Я в сети.</em></p>
+    </div>
+
+    <footer>
+        &copy; <span id="year"></span> | HACKER — Защита в цифровом мире | <em>Свет в темноте</em>
+    </footer>
+
+    <script>
+        // --- Год в футер ---
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // --- Кибер-дождь ---
+        const rain = document.getElementById("rain");
+        for (let i = 0; i < 50; i++) {
+            const drop = document.createElement("div");
+            drop.classList.add("drop");
+            drop.style.left = Math.random() * 100 + "vw";
+            drop.style.animationDuration = (Math.random() * 3 + 1) + "s";
+            drop.style.animationDelay = Math.random() * 5 + "s";
+            rain.appendChild(drop);
+        }
+
+        // --- Открыть терминал ---
+        function showTerminal() {
+            document.getElementById("terminal").classList.remove("hidden");
+            document.getElementById("response").textContent = "Соединение установлено. Ожидаю команду...";
+        }
+
+        // --- Отправить сигнал ---
+        function showMessage() {
+            document.getElementById("messageForm").classList.remove("hidden");
+            document.getElementById("terminal").classList.remove("hidden");
+            document.getElementById("response").textContent = "Готов к приёму сигнала о помощи.";
+        }
+
+        // --- Отправить помощь ---
+        function sendHelp() {
+            const msg = document.getElementById("helpMsg").value.trim();
+            if (!msg) {
+                alert("Введите сообщение!");
+                return;
+            }
+            document.getElementById("response").textContent = "✅ Сигнал получен. Шифруется и отправляется в защищённый канал.\n> HACKER УЖЕ РАБОТАЕТ НАД ВАШИМ ДЕЛОМ.";
+            document.getElementById("helpMsg").value = "";
+            setTimeout(() => {
+                alert("📬 Ваш сигнал о помощи отправлен. Ожидайте ответа в течение 24 часов.\n\nСпасибо, что доверились. Вы в безопасности.");
+            }, 1000);
+        }
+
+        // --- Easter egg: команда в терминале ---
+        document.getElementById("terminal").addEventListener("click", () => {
+            if (document.getElementById("response").textContent.includes("готов")) {
+                const cmds = [
+                    "scan --bully",
+                    "decrypt --chat",
+                    "trace --ip",
+                    "block --user",
+                    "restore --reputation"
+                ];
+                const cmd = cmds[Math.floor(Math.random() * cmds.length)];
+                document.getElementById("response").textContent += `\n> Выполняю: ${cmd}...\n> Результат: УСПЕШНО.`;
+            }
+        });
+    </script>
+</body>
+</html>
